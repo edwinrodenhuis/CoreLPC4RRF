@@ -9,6 +9,10 @@ RRF_SRC_DIRS += LPC LPC/MCP4461
 RRF_SRC_DIRS += Display Display/ST7920
 #RRF_SRC_DIRS += Linux
 
+#TMC22XX support?
+ifeq ($(TMC22XX), true)
+	RRF_SRC_DIRS += Movement/StepperDrivers
+endif
 
 #networking support?
 ifeq ($(NETWORKING), true)
