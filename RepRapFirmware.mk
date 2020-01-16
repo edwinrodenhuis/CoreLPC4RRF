@@ -9,6 +9,10 @@ RRF_SRC_DIRS += Heating/Sensors Fans ObjectModel Endstops Hardware Tools
 RRF_SRC_DIRS += Display Display/ST7920
 #RRF_SRC_DIRS += Linux
 
+#TMC22XX support?
+ifeq ($(TMC22XX), true)
+	RRF_SRC_DIRS += Movement/StepperDrivers
+endif
 
 #LPC RRF Addons
 RRF_SRC_DIRS += LPC LPC/MCP4461 LPC/FatFS
